@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "DotClean"
 version = "0.1.0"
-description = "List old or unused dotfiles/dotdirs"
+description = "List and clean old or unused dotfiles/dotdirs"
 authors = ["Michael John <michael.john@gmx.at>"]
 license = "GPL"
 
@@ -9,7 +9,7 @@ license = "GPL"
 dotclean = 'dotclean.__main__:main'
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.6"
 xdg = "^5.1.1"
 argparse = "^1.4.0"
 colorama = "^0.4.4"
