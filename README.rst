@@ -1,1 +1,1 @@
-# DotClean - List old or unused dotfiles/dotdirs
+# DotClean - List and clean old or unused dotfiles/dotdirs
