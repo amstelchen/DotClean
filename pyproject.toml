@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "DotClean"
+version = "0.1.0"
+description = "List old or unused dotfiles/dotdirs"
+authors = ["Michael John <michael.john@gmx.at>"]
+license = "GPL"
+
+[tool.poetry.scripts]
+dotclean = 'dotclean.__main__:main'
+
+[tool.poetry.dependencies]
+python = "^3.10"
+xdg = "^5.1.1"
+argparse = "^1.4.0"
+colorama = "^0.4.4"
+DateTime = "^4.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.urls]
+homepage = "https://github.com/amstelchen/DotClean"
+repository = "https://github.com/amstelchen/DotClean"
+documentation = "https://github.com/amstelchen/DotClean"
