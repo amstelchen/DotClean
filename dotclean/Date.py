@@ -13,8 +13,7 @@ class Date:
 
 # To store number of days in all months from
 # January to Dec.
-monthDays = [31, 28, 31, 30, 31, 30,
-			31, 31, 30, 31, 30, 31]
+monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 # This function counts number of leap years
 # before the given date
