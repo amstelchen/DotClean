@@ -18,7 +18,22 @@ When completed, run it with:
 
 #### Usage
 
-![demo](./images/demo.gif)
+```~ dotclean -h
+usage: DotClean [-h] [-f] [-d] [-x days] [-n] [-c days] [-v]
+
+List and clean old or unused dotfiles/dotdirs,
+
+options:
+  -h, --help            show this help message and exit
+  -f, --files           only apply to files
+  -d, --directories     only apply to directories
+  -x days, --exclude days
+                        exclude files not older than {x} days
+  -n, --nocolor         disable colored output
+  -c days, --clean days
+                        clean files older than {x} days (DANGEROUS!)
+  -v, --version         show program's version number and exit
+```
 
 #### Safety feature
 
