@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
-import sys, os, xdg, time, argparse
+import sys, os, time, argparse
 from datetime import datetime, timezone
 import colorama
 from colorama import Fore, Style
+from xdg import xdg_config_home
 import subprocess
 import shutil
 
@@ -37,7 +38,7 @@ def main():
     if safe_env is not None:
         print("File deletions enabled.")
     # home_dir = ""
-    config_dir = xdg.xdg_config_home()
+    config_dir = xdg_config_home()
     print(config_dir)
     if args.files is False and args.directories is False:
         args.files = True
