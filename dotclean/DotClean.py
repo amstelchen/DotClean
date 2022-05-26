@@ -8,10 +8,6 @@ from xdg import xdg_config_home
 import subprocess
 import shutil
 
-#import requests, argparse, time
-#from bs4 import BeautifulSoup
-#from prettytable import from_html_one, SINGLE_BORDER, DOUBLE_BORDER
-
 PROG = "DotClean"
 VERSION = "0.1.0"
 AUTHOR = "Copyright (C) 2022, by Michael John"
@@ -23,16 +19,14 @@ def main():
     start = time.time()
 
     parser = argparse.ArgumentParser(prog=PROG, description=DESC)
-    #parser.add_argument('userid', metavar='userid', type=int, help='user-id')
     parser.add_argument('-f', '--files', help='only apply to files', action='store_true')
     parser.add_argument('-d', '--directories', help='only apply to directories', action='store_true')
-    parser.add_argument('-x', '--exclude', metavar='months', type=int, help='exclude files not older than {x} months')
+    parser.add_argument('-x', '--exclude', metavar='days', type=int, help='exclude files not older than {x} days')
     parser.add_argument('-n', '--nocolor', help='disable colored output', action='store_true')
-    parser.add_argument('-c', '--clean', metavar='months', type=int, help='clean files older than {x} months (DANGEROUS!)')
+    parser.add_argument('-c', '--clean', metavar='days', type=int, help='clean files older than {x} days (DANGEROUS!)')
     parser.add_argument('-v', '--version', action='version', version='%(prog)s ' + VERSION + ' ' + AUTHOR)
     args = parser.parse_args()
     print(str(args).replace("Namespace", "Options"))
-    #user_id = args.userid
     safe_env = os.environ.get("DOTCLEAN")
     #if [str(safe_env) in a for a in ["True", "true", "yes", "1"]]:
     if safe_env is not None:
@@ -49,11 +43,6 @@ def main():
     if args.directories:
         onlydirs = [f for f in os.listdir(config_dir) if os.path.isdir(os.path.join(config_dir, f))]
         output = onlydirs
-        #print("\n".join(onlydirs))
-    #try:
-        #home_dir, __file__, __package__, __name__, __)
-    #except IndexError:
-    #    pass
     for file in output:
         SkipFile = False
         KillFile = False
