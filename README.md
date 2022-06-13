@@ -5,7 +5,7 @@
 Steps assume that `python` (>=3.6) and `pip` are already installed.
 
 
-    $ pip install DotClean
+    $ pip install dotclean
 
 Install directly from ``github``:
 
@@ -18,8 +18,9 @@ When completed, run it with:
 
 #### Usage
 
-```~ dotclean -h
-usage: DotClean [-h] [-f] [-d] [-x days] [-n] [-c days] [-v]
+```
+$ dotclean -h
+usage: dotclean [-h] [-f] [-d] [-x days] [-n] [-c days] [-v]
 
 List and clean old or unused dotfiles/dotdirs,
 
